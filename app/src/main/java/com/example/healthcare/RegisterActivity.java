@@ -40,6 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String email=edEmail.getText().toString();
                 String password=edpassword.getText().toString();
                 String confirmPassword=edConfirmpassword.getText().toString();
+                Database db=new Database(getApplicationContext(),"healthcare",null,1);
                 if(username.length()==0||email.length()==0||password.length()==0||confirmPassword.length()==0){
                     Toast.makeText(getApplicationContext(),"All fields are required",Toast.LENGTH_SHORT).show();
                 }
@@ -49,6 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 else{
                     if(isValid(password)){
+                        db.register(username,email,password);
                         Toast.makeText(getApplicationContext(), "Registration successful",Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
 
