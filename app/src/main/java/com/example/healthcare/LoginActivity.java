@@ -2,7 +2,9 @@ package com.example.healthcare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,12 +29,25 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username=edUseranamem.getText().toString();
                 String password=edPassword.getText().toString();
+                Database db=new Database(getApplicationContext(),"healthcare",null,1);
+
                 if(username.length()==0||password.length()==0){
                     Toast.makeText(getApplicationContext(),"All  fields are required to fill",Toast.LENGTH_SHORT).show();
 
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"Login button ",Toast.LENGTH_SHORT).show();
+                    if(db.login(username,password)==1){
+                        Toast.makeText(getApplicationContext(),"Login success ",Toast.LENGTH_SHORT).show();
+                        SharedPreferences sharedPreference=getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor=sharedPreference.edit();
+                        editor.putString("username",username);
+                        editor.apply();
+                        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(),"usernaem or passowrd wrong ",Toast.LENGTH_SHORT).show();
+                    }
 
                 }
              }
