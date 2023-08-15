@@ -20,7 +20,7 @@ public class BookAppointmentActivity extends AppCompatActivity {
   EditText ed1,ed2,ed3,ed4;
   private DatePickerDialog datePickerDialog;
   private TimePickerDialog timePickerDialog;
-  Button dateButton,TimeButton;
+  Button dateButton,TimeButton,btnbook,btnback;
   TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,8 @@ public class BookAppointmentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_book_appointment);
         dateButton=findViewById(R.id.buttondate);
         TimeButton=findViewById(R.id.buttontime);
+        btnback=findViewById(R.id.buttonbacktodoctor);
+        btnbook=findViewById(R.id.buttonRegisterbook);
         tv=findViewById(R.id.bookappointment);
         ed1=findViewById(R.id.editTextUserName);
         ed2=findViewById(R.id.location);
@@ -48,6 +50,18 @@ public class BookAppointmentActivity extends AppCompatActivity {
         ed2.setText(address);
         ed3.setText(userphone);
         ed4.setText("cons fees"+fees+"/-");
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(BookAppointmentActivity.this, DoctorActivity.class));
+            }
+        });
+        btnbook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         //date
         initDatepicker();

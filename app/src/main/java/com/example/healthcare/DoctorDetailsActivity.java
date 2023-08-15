@@ -1,7 +1,6 @@
 package com.example.healthcare;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -52,8 +51,8 @@ public class DoctorDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_doctor_details);
 
 
-     tv=findViewById(R.id.textDoctordetails);
-     btn=findViewById(R.id.backtopre);
+     tv=findViewById(R.id.textlocation);
+     btn=findViewById(R.id.backfromlab);
      Intent it=getIntent();
      String title= it.getStringExtra("title");
      tv.setText(title);
@@ -97,7 +96,7 @@ public class DoctorDetailsActivity extends AppCompatActivity {
              new String[]{"line1","line2","line3","line4","line5"},
              new int[]{R.id.line_a,R.id.line_b,R.id.line_c,R.id.line_d,R.id.line_e,}
              );
-        ListView lst=findViewById(R.id.ListviewDD);
+        ListView lst=findViewById(R.id.ListviewLab);
         lst.setAdapter(sa);
         lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
