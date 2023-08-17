@@ -183,7 +183,7 @@
         app:layout_constraintVertical_bias="0.658" />
 
     <Button
-        android:id="@+id/buttondate"
+        android:id="@+id/buttondateforcrd"
         style="?android:spinnerStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -196,7 +196,7 @@
         app:layout_constraintVertical_bias="0.726" />
 
     <Button
-        android:id="@+id/buttontime"
+        android:id="@+id/buttontimeforcrd"
         style="?android:spinnerStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

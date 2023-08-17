@@ -26,8 +26,8 @@ public class BookAppointmentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_appointment);
-        dateButton=findViewById(R.id.buttondate);
-        TimeButton=findViewById(R.id.buttontime);
+        dateButton=findViewById(R.id.buttondateforcrd);
+        TimeButton=findViewById(R.id.buttontimeforcrd);
         btnback=findViewById(R.id.buttonbacktodoctor);
         btnbook=findViewById(R.id.buttonRegisterbook);
         tv=findViewById(R.id.bookappointment);
