@@ -32,7 +32,7 @@ public class BookAppointmentActivity extends AppCompatActivity {
         btnbook=findViewById(R.id.buttonRegisterbook);
         tv=findViewById(R.id.bookappointment);
         ed1=findViewById(R.id.editTextUserName);
-        ed2=findViewById(R.id.location);
+        ed2=findViewById(R.id.bookingEmail);
         ed3=findViewById(R.id.userphone);
         ed4=findViewById(R.id.fees);
         ed1.setKeyListener(null);

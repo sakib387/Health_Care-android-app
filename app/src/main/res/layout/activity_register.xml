@@ -44,7 +44,7 @@
         app:layout_constraintVertical_bias="0.371" />
 
     <EditText
-        android:id="@+id/editConfirmPassword"
+        android:id="@+id/bookingAddress"
         android:layout_width="338dp"
         android:layout_height="64dp"
         android:background="@drawable/input_bg"
@@ -67,7 +67,7 @@
         app:layout_constraintVertical_bias="0.758" />
 
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/bookingPIn"
         android:layout_width="338dp"
         android:layout_height="64dp"
         android:background="@drawable/input_bg"
@@ -107,7 +107,7 @@
 
 
     <EditText
-        android:id="@+id/location"
+        android:id="@+id/bookingEmail"
         android:layout_width="338dp"
         android:layout_height="64dp"
         android:background="@drawable/input_bg"
@@ -143,7 +143,7 @@
         app:layout_constraintVertical_bias="0.959" />
 
     <Button
-        android:id="@+id/buttonRegister"
+        android:id="@+id/buttonBook"
         android:layout_width="215dp"
         android:layout_height="45dp"
         android:background="@drawable/btn_bg"
