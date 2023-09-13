@@ -22,11 +22,12 @@ public class BuyMedicineDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buy_medicine_details);
-        tvTotalcost=findViewById(R.id.MDprice);
-        tvPackageName=findViewById(R.id.MDpackage);
-        edDetails=findViewById(R.id.BuyMDmultiline);
-        btnBack=findViewById(R.id.backfromMD);
-        btnCrd=findViewById(R.id.checkoutMD);
+        tvTotalcost=findViewById(R.id.MDpriceDD);
+        tvPackageName=findViewById(R.id.MDpackageDD);
+        edDetails=findViewById(R.id.BuyMDmultilineDD);
+        edDetails.setKeyListener(null);
+        btnBack=findViewById(R.id.backfromMDDD);
+        btnCrd=findViewById(R.id.DDcheckoutCart);
         Intent intent=getIntent();
         tvPackageName.setText(intent.getStringExtra("text1"));
         edDetails.setText(intent.getStringExtra("text2"));
@@ -38,8 +39,11 @@ public class BuyMedicineDetailsActivity extends AppCompatActivity {
           }
       });
       btnCrd.setOnClickListener(new View.OnClickListener() {
+
           @Override
           public void onClick(View v) {
+
+
               SharedPreferences sharedPreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
               String username = sharedPreferences.getString("username", "");
             String product=tvPackageName.getText().toString();
@@ -47,12 +51,12 @@ public class BuyMedicineDetailsActivity extends AppCompatActivity {
           Database db=new Database(getApplicationContext(),"healthcare",null,1);
 
          if(db.checkCart(username,product)==1){
-             Toast.makeText(getApplicationContext(),"Product Already Added",Toast.LENGTH_SHORT);
+             Toast.makeText(getApplicationContext(),"Product Already Added",Toast.LENGTH_SHORT).show();
 
          }
          else {
              db.addCart(username,product,price,"medicine");
-             Toast.makeText(getApplicationContext(),"Product Added to Cart",Toast.LENGTH_SHORT);
+             Toast.makeText(getApplicationContext(),"Product Added to Cart",Toast.LENGTH_SHORT).show();
              startActivity(new Intent(BuyMedicineDetailsActivity.this,BuyMedicineActivity.class));
          }
 

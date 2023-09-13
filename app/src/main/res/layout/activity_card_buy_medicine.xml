@@ -2,11 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cardcost"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".CardLabActivity">
+    tools:context=".CardBuyMedicine">
 
     <TextView
         android:id="@+id/textView4"
@@ -22,7 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/totalcost"
+        app:layout_constraintTop_toBottomOf="@+id/totalCartCOst"
         app:layout_constraintVertical_bias="0.14" />
 
     <TextView
@@ -57,7 +56,7 @@
         app:layout_constraintVertical_bias="0.144" />
 
     <TextView
-        android:id="@+id/cartpackage"
+        android:id="@+id/cartpackageMD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -75,7 +74,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ListView
-        android:id="@+id/crdmultiline"
+        android:id="@+id/crdmultilineMD"
         android:layout_width="336dp"
         android:layout_height="221dp"
         android:layout_marginTop="19dp"
@@ -88,13 +87,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.558"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cartpackage"
+        app:layout_constraintTop_toBottomOf="@+id/cartpackageMD"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints"
         tools:text="hello" />
 
     <TextView
-        android:id="@+id/totalCartCOst"
+        android:id="@+id/totalCartCOstMD"
         android:layout_width="269dp"
         android:layout_height="30dp"
         android:layout_marginTop="27dp"
@@ -104,11 +103,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/crdmultiline"
+        app:layout_constraintTop_toBottomOf="@+id/crdmultilineMD"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/buttondateforcrd"
+        android:id="@+id/buttondateforcrdMD"
         style="?android:spinnerStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -121,36 +120,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.837" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="161dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="176dp"
-        android:text="Select Time"
-        android:textColor="#E91E63"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.808"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/totalCartCOst"
-        app:layout_constraintVertical_bias="0.186" />
+
 
     <Button
-        android:id="@+id/buttontimeforcrd"
-        style="?android:spinnerStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="10:00"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.746"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.837" />
-
-    <Button
-        android:id="@+id/backfromcart"
+        android:id="@+id/backfromcartMD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
@@ -163,7 +136,7 @@
         app:layout_constraintVertical_bias="0.952" />
 
     <Button
-        android:id="@+id/checkout"
+        android:id="@+id/checkoutMD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Check Out"

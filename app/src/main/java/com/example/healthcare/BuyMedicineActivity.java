@@ -54,6 +54,7 @@ public class BuyMedicineActivity extends AppCompatActivity {
         btncrd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(BuyMedicineActivity.this,CardBuyMedicine.class));
 
             }
         });

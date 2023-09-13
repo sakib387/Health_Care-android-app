@@ -38,7 +38,7 @@
         app:layout_constraintVertical_bias="0.144" />
 
     <TextView
-        android:id="@+id/MDpackage"
+        android:id="@+id/MDpackageDD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -55,7 +55,7 @@
         app:layout_constraintVertical_bias="0.215" />
 
     <EditText
-        android:id="@+id/BuyMDmultiline"
+        android:id="@+id/BuyMDmultilineDD"
         android:layout_width="290dp"
         android:layout_height="359dp"
         android:editable="false"
@@ -73,7 +73,7 @@
         tools:text="hello" />
 
     <TextView
-        android:id="@+id/MDprice"
+        android:id="@+id/MDpriceDD"
         android:layout_width="242dp"
         android:layout_height="45dp"
         android:text="Total price"
@@ -83,11 +83,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.418"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BuyMDmultiline"
+        app:layout_constraintTop_toBottomOf="@+id/BuyMDmultilineDD"
         app:layout_constraintVertical_bias="0.142" />
 
     <Button
-        android:id="@+id/backfromMD"
+        android:id="@+id/backfromMDDD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
@@ -99,7 +99,7 @@
         app:layout_constraintVertical_bias="0.961" />
 
     <Button
-        android:id="@+id/checkoutMD"
+        android:id="@+id/DDcheckoutCart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add to Card"
