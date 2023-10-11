@@ -19,7 +19,7 @@ public class HealthArticalActivity extends AppCompatActivity {
         {"walking daily","","","","click more details"},
             {"Home care of covid 19","","", "","click more details"},
             {"stop smoking","","","","click more details"},
-            {"menstrual cramps","","","","click more details"},
+            {"sound sleep","","","","click more details"},
             {"healthy gut","","","","click more details"}
     };
     private int [] Image={

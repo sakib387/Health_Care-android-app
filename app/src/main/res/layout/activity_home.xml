@@ -16,8 +16,8 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="12dp"
-        android:text="24 Hour's Health Care"
-        android:textColor="#fff"
+        android:text=" Health Care"
+        android:textColor="#16DA1E"
         android:textSize="30dp"
         android:textStyle="bold" />
 

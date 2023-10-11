@@ -2,6 +2,7 @@ package com.example.healthcare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,7 +14,8 @@ import android.widget.Toast;
 
 public class BuyMedicineBookActivity extends AppCompatActivity {
    EditText edname,edaddress,edcontact,edpin;
-   Button btnBook;
+   Button btnBook,back;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,13 +25,20 @@ public class BuyMedicineBookActivity extends AppCompatActivity {
         edcontact=findViewById(R.id.bookingEmailMD);
         edpin=findViewById(R.id.bookingPInMD);
         btnBook=findViewById(R.id.buttonBookMD);
+        back=findViewById(R.id.buttonBookMDBack);
 
 
         Intent intent=getIntent();
         String[] price =intent.getStringExtra("price").toString().split(java.util.regex.Pattern.quote(":"));
         String date=intent.getStringExtra("date");
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(BuyMedicineBookActivity.this, HomeActivity.class));
 
+            }
+        });
         btnBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

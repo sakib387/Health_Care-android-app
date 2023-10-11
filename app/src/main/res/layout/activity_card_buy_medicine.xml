@@ -4,32 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/back1"
     tools:context=".CardBuyMedicine">
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="112dp"
-        android:layout_height="39dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
         android:layout_marginTop="13dp"
-        android:layout_marginBottom="176dp"
         android:gravity="center"
         android:text="select date"
         android:textColor="#E91E63"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/totalCartCOst"
-        app:layout_constraintVertical_bias="0.14" />
+        app:layout_constraintTop_toBottomOf="@+id/totalCartCOstMD"
+        app:layout_constraintVertical_bias="0.19" />
 
     <TextView
         android:id="@+id/textFindDoctor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="24 Hour's Health Care"
+        android:text=" Health Care"
         android:textColor="#12E11A"
         android:textSize="30dp"
         android:textStyle="bold"
@@ -92,6 +91,7 @@
         tools:ignore="MissingConstraints"
         tools:text="hello" />
 
+
     <TextView
         android:id="@+id/totalCartCOstMD"
         android:layout_width="269dp"
@@ -102,9 +102,10 @@
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.61"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/crdmultilineMD"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.11" />
 
     <Button
         android:id="@+id/buttondateforcrdMD"
@@ -115,12 +116,10 @@
         android:text="08/08/2001"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.837" />
-
-
+        app:layout_constraintVertical_bias="0.829" />
 
     <Button
         android:id="@+id/backfromcartMD"
