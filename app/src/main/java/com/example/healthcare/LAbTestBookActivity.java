@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class LAbTestBookActivity extends AppCompatActivity {
    EditText edname,edaddress,edcontact,edpincode;
-   Button btnbook;
+   Button btnbook,bck;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +23,13 @@ public class LAbTestBookActivity extends AppCompatActivity {
         edcontact=findViewById(R.id.bookingEmail);
         edpincode=findViewById(R.id.bookingPIn);
         btnbook=findViewById(R.id.buttonBook);
+        bck=findViewById(R.id.buttoback);
+        bck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LAbTestBookActivity.this, HomeActivity.class));
+            }
+        });
         Intent intent=getIntent();
         String[] price =intent.getStringExtra("price").toString().split(java.util.regex.Pattern.quote(":"));
         String date=intent.getStringExtra("date");
